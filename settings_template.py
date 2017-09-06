@@ -9,7 +9,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-TIME_ZONE = 'America/New_York'
+TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 USE_I18N = True

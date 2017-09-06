@@ -12,9 +12,7 @@
 
     <meta http-equiv="Content-Language" content="en-us" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="{% static 'jquery-ui.css' %}" rel="stylesheet" />
-    <link href="{% static 'libraries.css' %}" rel="stylesheet" />
-{% block extrahead %}{% endblock extrahead %}{% endblock head_content %}
+    <link href="{% static 'jquery-ui.css' %}" rel="stylesheet" />{% block extrahead %}{% endblock extrahead %}{% endblock head_content %}
 
 {% block content %}{% block page_head_container %}{% block page_head %}{% block sub_page_head %}{% if page_title %}
     <h1>{{ page_title }}</h1>{% endif %}{% endblock sub_page_head %}{% endblock page_head%}{% endblock page_head_container %}

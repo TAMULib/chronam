@@ -83,6 +83,11 @@ urlpatterns += [
         views.help, 
         name="chronam_help"),
 
+    # added by mwb
+    url(r'^contribute/$', 
+        views.contribute, 
+        name="chronam_contribute"),
+
     # explainOCR.html
     url(r'^ocr/$', 
         views.ocr, 
