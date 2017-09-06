@@ -14,7 +14,7 @@ from browse import issues, title_holdings, title_marc, \
 from directory import newspapers, newspapers_atom, search_titles_results, \
     newspapers_rdf
 
-from static import about, about_api, help
+from static import about, about_api, help, contribute
 
 from reports import reports, batches, batches_atom, batches_json, batches_csv, \
     batch_rdf, batch_json, batch, reels, reel, awardee_rdf, awardees, awardees_json, \

@@ -39,3 +39,15 @@ def help(request):
     ])
     return render_to_response('help.html', dictionary=locals(),
                               context_instance=RequestContext(request))
+
+@cache_page(settings.DEFAULT_TTL_SECONDS)
+def contribute(request):
+    page_title = "Contribute"
+    crumbs = list(settings.BASE_CRUMBS)
+    crumbs.extend([
+        {'label':'contribute',
+         'href': urlresolvers.reverse('chronam_contribute'),
+         'active': True},
+    ])
+    return render_to_response('contribute.html', dictionary=locals(),
+                              context_instance=RequestContext(request))
