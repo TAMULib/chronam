@@ -11,8 +11,9 @@ table.month td.title {
     background-color: #eff2f4;
 }
 
-table.month td.single, table.month td.multiple {
-    background-color: #2bffc6; 
+table.month td.single,
+table.month td.multiple {
+    background-color: #99CCFF;
 }
 
 table.month td.single {
@@ -24,14 +25,336 @@ table.month td.multiple {
     font-style: italic;
 }
 
+.global-nav .global-tabs {
+    overflow: auto;
+    display: block;
+padding:1rem 2rem;
+/* width: 75%; */
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
 .navbar-inverse .navbar-inner {
-    background-color: #5a534d;
-    background-image: -moz-linear-gradient(top,#4d4d4d,#5a534d);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#4d4d4d),to(#5a534d));
-    background-image: -webkit-linear-gradient(top,#4d4d4d,#5a534d);
-    background-image: -o-linear-gradient(top,#4d4d4d,#5a534d);
-    background-image: linear-gradient(to bottom,#4d4d4d,#5a534d);
+    background-color: #4d4d4d;
+    background-image: -moz-linear-gradient(top, #4d4d4d, #5a534d);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d4d4d), to(#5a534d));
+    background-image: -webkit-linear-gradient(top, #4d4d4d, #5a534d);
+    background-image: -o-linear-gradient(top, #4d4d4d, #5a534d);
+    background-image: linear-gradient(to bottom, #4d4d4d, #5a534d);
     background-repeat: repeat-x;
-    border-color: #a9a09a
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44dd44dd44dd',endColorstr='#5a534d',GradientType=0);
+    border-bottom: 1px solid #a9a09a;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#44dd44dd44dd', endColorstr='#4d4d4d', GradientType=0);
+}
+
+.navbar-inverse.brand {
+    color: #ededed;
+}
+
+body {
+    min-height: 1225px;
+}
+
+.footer {}
+
+#tamu-footer-links li {
+    display: inline-block;
+    padding: 30px;
+    padding-right: 10px;
+}
+
+#tamu-footer-links li a {
+    color: #4d4d4d;
+    border-bottom: 1px dotted #8a887d;
+    text-decoration: none;
+}
+
+#bottom-text li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#global-footer a {
+    color: #e3dfd5;
+}
+
+#tamu-footer-img {
+    float: left;
+    padding: 20px;
+}
+
+footer.tamu-footer {
+    position: relative;
+    bottom: 0;
+    width: 100 %;
+    height: 206px;
+}
+
+#global-footer{
+text-align: center;
+    padding: 30px 0;
+}
+
+#bottom-text li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#tamu-footer-container {
+    background-color: #ededed;
+    border-top: 1px solid #a9a09a;
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.2) inset;
+    clear: both;
+    padding: 0!important;
+    position: relative;
+}
+
+#tamu-footer {
+  /*  height: 150px;*/
+    text-align: center;
+}
+
+#global-footer {
+    position: relative;
+    overflow: hidden;
+ /*   margin-top: -120px;*/
+   /* height: 120px;*/
+    width: 100%;
+    clear: both;
+    text-align:center;
+}
+
+#global-footer,
+#global-footer.container {
+    background: #4d4d4d;
+    color: #e3dfd5;
+    box-shadow: inset 0 4px 8px-2px rgba(0, 0, 0, 0.2);
+}
+
+.contentMain {
+    background: #ffffff;
+    padding: 20px;
+    min-height: 1000px;
+}
+
+@media only screen and(max-width: 420px) {
+    body {
+        padding-right: 0px;
+        padding-left: 0px;
+        min-height: 600px;
+    }
+    .container {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+
+}
+
+@media only screen and(min-width: 768px) {
+    .lib-link a {
+        font-size: .8rem;
+    }
+}
+
+.lib-link a {
+    color: #fff;
+    display: block;
+    padding: 5px 0 5px 55px;
+    margin: 10px 0;
+    font-size: 1.25rem;
+    text-align: left;
+    background: url('http://library.tamu.edu/assets/images/tam.png') no-repeat;
+}
+
+.navbar-inverse.brand,
+.navbar-inverse.nav > li > a {
+    color: #ededed;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inverse.nav > li > a:focus,
+.navbar-inverse.nav > li > a:hover {
+    color: #fff;
+    background-color: #500000;
+}
+
+.main-lib {
+    background: url('http://cushing.library.tamu.edu/book_history_workshop/images/denim.png');
+    z-index: 0;
+    position: relative;
+}
+
+.site-title {
+      background: #500000;
+          border-top: 1px solid #8d8d8d;
+              -webkit-box-shadow: 0 8px 6px -6px black;
+                  -moz-box-shadow: 0 8px 6px -6px black;
+                      box-shadow: 0 8px 6px -6px black;
+}
+
+
+
+
+.site {
+      color: #fff;
+          font-size: 1.25em;
+              font-family: 'Lato', Arial, sans-serif;
+                  margin: 20px 0;
+                      text-align: center;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .global-nav {
+        margin: 0;
+        text-align: right;
+        padding: 0;
+    }
+
+  .site {
+        margin: 20px 0;
+            text-align: left;
+  }
+
+
+}
+
+.global-nav,
+.global-nav .top-bar {
+    background: #3c0000;
+}
+
+.global-nav {
+    margin: 0;
+    text-align: right;
+}
+
+.global-nav.tabs dd: last-child > a {
+    border-right: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #tamu-footer {
+        height: auto;
+        text-align: center;
+    }
+    #tamu-footer-links li {
+        display: block;
+        padding: 5px;
+        padding-right: 10px;
+    }
+    #global-footer {
+        position: relative;
+        overflow: hidden;
+        margin-top: auto;
+        height: auto;
+        padding-bottom: 20px;
+        width: 100 %;
+        clear: both;
+    }
+body {
+      padding-right: 0px !important; 
+          padding-left: 0px !important; 
+}
+
+
+  dd {
+        margin-left: -15px !important;
+  }
+
+.tabs.tab-title>a, .tabs dd>a {
+    outline: 0;
+    display: block;
+    padding: 1rem 2rem !important;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.lib-link a {
+    color: #fff;
+    display: block;
+    padding: 5px 0 5px 55px;
+    margin: 10px auto;
+    font-size: 1.25rem;
+    text-align: center;
+    background: url(http://library.tamu.edu/assets/images/tam.png)22px 0 no-repeat !important;
+}
+
+}
+
+
+.global-nav.tabs dd>a {
+    padding: 15px 18px;
+    border-right: 1px solid #6a0000;
+}
+
+.global-nav .tabs dd>a {
+    background: 0 0;
+    color: #fff;
+    font-size: .8rem;
+}
+
+
+dd {
+    display: inline-block;
+}
+
+dl {
+    margin: 0!important;
+}
+
+
+@media only screen and (min-width: 43.913em) {
+    .global-nav .tabs dd>a {
+        padding: 15px 20px;
+        border-right: 1px solid #6a0000;
+    }
+
+
+    .global-nav.tabs dd:last-child>a {
+        border-right:none !important;
+    }
+}
+    
+
+
+.white-overlay:after {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    content: " ";
+}
+
+	 ul.inline{
+          margin-left: 200px !important;
+          margin-top:5px;
+  }
+  .pagetools a.disabled, .pagetools a.disabled:hover {
+        color: #c1c1c1;
+  }
+  .toolbar{
+    color:#ffffff !important;
+}
+.toolbar [class^="icon-"], .toolbar [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url('http://library.tamu.edu/assets/images/glyphicons-halflings_wht.png');
+    
+    background-repeat: no-repeat;
 }
