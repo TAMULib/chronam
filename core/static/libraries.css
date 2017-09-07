@@ -181,7 +181,7 @@ text-align: center;
 }
 
 .main-lib {
-    background: url('http://cushing.library.tamu.edu/book_history_workshop/images/denim.png');
+    background: url('images/denim.png');
     z-index: 0;
     position: relative;
 }
