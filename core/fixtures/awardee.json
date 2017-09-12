@@ -21,6 +21,14 @@
     "fields": {
       "name": "University of Utah, Marriott Library",
       "created": "2009-02-09 06:44:45"
+    },
+  },
+  {
+    "pk": "TXA",
+    "model": "core.awardee",
+    "fields": {
+      "name": "Texas A and M University, Evans Library",
+      "created": "2017-01-01 06:00:00"
     }
   }
 ]
