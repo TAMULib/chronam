@@ -330,6 +330,14 @@
     }
   },
   {
+    "pk": "txa",
+    "model": "core.awardee",
+    "fields": {
+      "name": "Texas A and M University, Evans Library",
+      "created": "2017-01-01 06:00:00"
+    }
+  },  
+  {
     "pk": "Online Resource",
     "model": "core.materialtype",
     "fields": {}
@@ -2980,4 +2988,5 @@
       "name": "Zimbabwe"
     }
   }
+  
 ]
