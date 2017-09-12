@@ -24,7 +24,7 @@
     },
   },
   {
-    "pk": "TXA",
+    "pk": "txa",
     "model": "core.awardee",
     "fields": {
       "name": "Texas A and M University, Evans Library",
