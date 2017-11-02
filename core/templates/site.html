@@ -83,7 +83,7 @@
                         <dl class="tabs">
                             <dd><a href="#">Hours</a></dd>
                             <dd><a href="#">Libraries</a></dd>
-                            <dd><a href="https://library.tamu.edu/mylibrary/" onclick="location.href='https://library.tamu.edu/mylibrary/'" title="Access the myLibrary online application">myLibrary</a></dd>
+                            <dd><a href="https://library.tamu.edu/mylibrary/" onclick="location.href='https://library.tamu.edu/mylibrary/'" title="Access the myLibrary online application">MyLibrary</a></dd>
                             <dd><a href="#">Help</a></dd>
                         </dl>
                     </div>
@@ -112,12 +112,12 @@
                 <div class="span12 visible-phone">
                     <div class="site">
                         <!-- <h3>The Battalion Archive</h3></div>  mwb   -->
-                        <h3>TAMU Newspaper Collection</h3></div>
+                        TAMU Newspaper Collection</div>
                 </div>
                 <div class="span12 hidden-phone pull-left">
                     <div class="site">
                         <!-- <h2>The Battalion Archive</h2></div>  mwb   -->
-                        <h2>TAMU Newspaper Collection</h2></div>
+                        TAMU Newspaper Collection</div>
                 </div>
             </div>
 
@@ -137,32 +137,50 @@
               <li><a href="{% url 'chronam_newspapers' %}">Newspapers</a></li>
               <li><a href="{% url 'chronam_about' %}">About</a></li>
               <li><a href="{% url 'chronam_contribute' %}">Contribute</a></li>
-<!--
-              <li><a href="{% url 'chronam_about_api' %}">API(r)</a></li>
-              <li><a href="{% url 'chronam_reports' %}">Reports(r)</a></li>
-mwb   -->
               <li><a href="/help/">Help</a></li>
             </ul>
-	    <form class="navbar-form pull-right" action="{% url 'chronam_search_pages_results' %}" method="get">
-              <input type="hidden" name="rows" id="rows" alt="rows" value="20" />
-              <input type="hidden" name="searchType" alt="searchType" value="basic" />
-              <input class="span2" type="text" name="proxtext" placeholder="search words">
-	      <div class="btn-group">
-		<button type="submit" class="btn">Search</button>
-		<button class="btn dropdown-toggle" data-toggle="dropdown">
-		  <span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-		  <li><a tabindex="-1" href="/search/advanced/">Advanced Search</a></li>
-		  <li><a tabindex="-1" href="/newspapers/">All Digitized Newspapers</a></li>
-		  <li><a tabindex="-1" href="/search/titles/">U.S. Newspaper Directory</a></li>
-		</ul>
-	      </div>
-            </form>
+	   
           </div>
         </div>
       </div>
     </div>
+    <div class="searchBox"> 
+      <div class="container">
+        <div class="row">
+
+
+
+<div class="input-append input-group input-group-lg" id="search">
+  <input name="proxtext" type="text" class="form-control span7" id="appendedInputButton" placeholder="Search newspaper contents" type="text">
+  <button class="btn btn-default" type="submit">Search</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+                  </div>
+ </div>
+</div>
     <div class="container contentMain">{% if crumbs and crumbs|length > 1 %}
       <ul class="breadcrumb">{% for crumb in crumbs %}
 	<li {% if crumb.active %}class="active"{% endif %}><a href="{{crumb.href}}">{{crumb.label}}</a>{% if forloop.last %}{% else %} <span class="divider">/</span>{% endif %}</li>{% endfor %}
@@ -171,53 +189,7 @@ mwb   -->
    
    
    </div>
-   <footer class="tamu-footer"role="contentInfo">
-<div id="tamu-footer-container">
-        <div id="tamu-footer" class="container">
-          <div class="row">
-          <div id="tamu-footer-img" class="span3">
-                <img alt="" height="45" src="http://library.tamu.edu/assets/images/maroon_lib.png">
-            </div>
-            <div id="tamu-footer-links" class="span8">
-                <ul>
-                    <li><a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a></li>
-                    <li><a href="http://library.tamu.edu/about/hours.html">Hours &amp; locations</a></li>
-                    <li> <a href="https://library.tamu.edu/mylibrary/">MyLibrary</a></li>
-                    <li> <a href="http://askus.library.tamu.edu/">AskUs</a></li>
-                </ul>
-           </div>
-        </div>
- </div>
-    
-
-
-    <div id="global-footer">
-        <div class="container">
-            <div class="row">
-                <!-- #bottom-logo end -->
-                <div id="bottom-text" class="span12">
-                    <ul>
-                        <li><a href="https://howdy.tamu.edu">howdy.tamu.edu</a></li>
-                        <li><a href="../services/tech_troubleshooting.html">Off-Campus Access</a></li>
-                        <li><a href="http://www.tamu.edu">Texas A&amp;M University</a></li>
-                        <li><a href="http://library.tamu.edu/compliance.html">Site Policies</a></li>
-                    <li><a href="http://www.thecb.state.tx.us/apps/txcrews/">Texas CREWS</a></li>
-                        <li><a href="http://asktamulib.altarama.com/reft100.aspx?key=comments">Comments</a></li>
-                    </ul>
-                </div>
-                <!-- .bottom-text end -->
-                <div class="clear"></div>
-                <p class="copyright vcard">© <span class="fn org">Texas A&amp;M University</span>, <span class="adr"> <span class="locality">College Station</span>, <span class="region">Texas</span> <span class="postal-code">77845</span></span>.&nbsp;&nbsp;
-                   
-                </p>
-            </div>
-            <!-- .row end -->
-        </div>
-        <!-- .container end -->
-    </div>
-    <!-- global-footer end -->
-    <!-- Global footer snippet end -->
-</footer> 
+  {% include "includes/footer.html" %}
    
    
    </div>

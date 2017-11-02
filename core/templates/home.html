@@ -1,10 +1,65 @@
-{% extends "site_base.html" %}
-
-{% load static from staticfiles %}
-{% load humanize %}
- 
-{% block content %}
-<div class="row">
+{% extends "site_base.html" %} {% load static from staticfiles %} {% load humanize %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="span3">
+            <h1>Welcome</h1>
+            <p>The Texas A&amp;M University Newspaper Collection consists of digitized copies of the newspapers produced at Texas A&amp;M, beginning with the Texas Collegiate 1876-1880, The College Journal 1889-1893, The Battalion 1893-present, Little Battalion 1947-1951, and The Daily Bulletin/Reveille 1916-1938. Digital facsimiles were produced from original newspapers housed in Cushing Memorial Library and Archives and microfilm copies housed in the Sterling C. Evans Library.</p>
+            <p>
+                The digitized Texas A&amp;M newspaper collection is funded through the generosity of the Class of 1949. To support the digitization project please contact Adelle Hedleston ’88 at <a href="mailto:adelle-h@library.tamu.edu">adelle-h@library.tamu.edu</a> or 979-862-4574.
+            </p>
+        </div>
+        <div class="span9 papers">
+            <h2>Featured</h2>
+            <ul class="featuredImg">
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/>The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/> The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/> The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/>The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/>The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/>The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/>The Battalion
+                    <br/> Date of Issue</li>
+                <li><img src="/media/images/newspaper.png" alt="newspaper" />
+                    <br/>The Battalion
+                    <br/> Date of Issue</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <h3>Newspaper Stats</h3></div>
+        <div class="span9 stats">
+            <ul>
+                <li>
+                    <div class="statBox">8,345</div>
+                    <div class="statDesc">Total # of Issues</div>
+                </li>
+                <li>
+                    <div class="statBox">&lt;10k</div>
+                    <div class="statDesc">Total # of Visitors</div>
+                </li>
+                <li>
+                    <div class="statBox">3,324</div>
+                    <div class="statDesc">Issues Downloaded</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
   <div class="span3">
     <h2><a href='{% url 'chronam_search_pages_results' %}?dateFilterType=range&date1={{date|date:"m/d/Y" }}&date2={{date|date:"m/d/Y"}}/'>100 Years Ago today</a></h2>
     <p>{{ date|date:"F j, Y" }} ({{pages|length}})</p>
@@ -21,14 +76,11 @@
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
   </div>
   <div class="span3"></div>
-</div>
-{% endblock content %}
-
- 
-{% block javascript %}{{ block.super }}
-<script type="text/javascript"> 
-  var j = Math.floor(Math.random() * {{pages|length}});
-  $('.carousel').carousel(j)
-  $('.carousel').carousel('cycle')
-</script> 
+</div> -->
+{% endblock content %} {% block javascript %}{{ block.super }}
+<script type="text/javascript">
+var j = Math.floor(Math.random() * { { pages | length } });
+$('.carousel').carousel(j)
+$('.carousel').carousel('cycle')
+</script>
 {% endblock %}

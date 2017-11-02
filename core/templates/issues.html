@@ -30,14 +30,19 @@ jQuery(function($){
         <label class="bold" for="year_select">Issues for:</label>&nbsp; {{select_year_form.year}}
     </form>
     
-    <p class="rule-top"><a href="{% url 'chronam_issues_first_pages' title.lccn %}"><strong>Show all front pages</strong></a></p> 
-    <p class="rule-top gray">Single edition:<br /> dates in <b>bold</b>.</p> 
-    <p class="gray">Multiple editions:<br /> dates in <b><i>bold italics</i></b>.</p> 
+    <p class="rule-top"><a href="{% url 'chronam_issues_first_pages' title.lccn %}"><strong> View Gallery</strong></a></p> 
+    
 </div><!-- end id:col2_left --> 
 {% endblock %}
 
 {% block newspaper_content %}
 <div id="col2_right" class='row'> 
     {{year_view|safe}}
+
 </div><!-- end id:col2_right --> 
+<div>
+    <p class="rule-top gray">Single edition:<br /> dates in <b>bold</b>.</p> 
+    <p class="gray">Multiple editions:<br /> dates in <b><i>bold italics</i></b>.</p> 
+</div>
 {% endblock %}
+
