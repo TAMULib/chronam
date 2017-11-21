@@ -15,7 +15,7 @@ def home(request, date=None):
     context = RequestContext(request, {})
     context["crumbs"] = list(settings.BASE_CRUMBS)
     today = datetime.date.today()
-    context["date"] = date = today.replace(year=today.year-100)
+    context["date"] = date = today
     context["pages"] = _frontpages(request, date)
     template = get_template("home.html")
     # note the date is handled on the client side in javascript
@@ -26,9 +26,9 @@ def _frontpages(request, date):
     # if there aren't any issues default to the first 20 which
     # is useful for testing the homepage when there are no issues
     # for a given date
-    issues = models.Issue.objects.filter(date_issued=date)
-    if issues.count() == 0:
-        issues = models.Issue.objects.all()[0:20]
+    issues = models.Issue.objects.filter(date_issued__day=date.day, date_issued__month=date.month)
+    if issues.count() < 8:
+        issues = models.Issue.objects.all()[0:8]
 
     results = []
     for issue in issues:
@@ -47,6 +47,7 @@ def _frontpages(request, date):
             'thumbnail_url': first_page.thumb_url,
             'medium_url': first_page.medium_url,
             'place_of_publication': issue.title.place_of_publication,
+            'date': issue.date_issued,
             'pages': issue.pages.count()})
     return results
 
