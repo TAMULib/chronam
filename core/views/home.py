@@ -27,10 +27,10 @@ def _frontpages(request, date):
     # if there aren't any issues default to the first 20 which
     # is useful for testing the homepage when there are no issues
     # for a given date
-    issues = models.Issue.objects.filter(date_issued__day=date.day, date_issued__month=date.month)
-    if issues.count() < 8:
+    issues = list(models.Issue.objects.filter(date_issued__day=date.day, date_issued__month=date.month))
+    if len(issues) < 8:
         issues = list(models.Issue.objects.filter(date_issued__month=date.month))
-        random.shuffle(issues)
+    random.shuffle(issues)
     results = []
     for issue in issues[:8]:
         first_page = issue.first_page
