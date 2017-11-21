@@ -1,5 +1,6 @@
 import json
 import datetime
+import random
 
 from django.conf import settings
 from django.http import Http404, HttpResponse
@@ -28,10 +29,10 @@ def _frontpages(request, date):
     # for a given date
     issues = models.Issue.objects.filter(date_issued__day=date.day, date_issued__month=date.month)
     if issues.count() < 8:
-        issues = models.Issue.objects.all()[0:8]
-
+        issues = list(models.Issue.objects.filter(date_issued__month=date.month))
+        random.shuffle(issues)
     results = []
-    for issue in issues:
+    for issue in issues[:8]:
         first_page = issue.first_page
         if not first_page or not first_page.jp2_filename:
             continue
