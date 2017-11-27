@@ -147,39 +147,16 @@
     <div class="searchBox"> 
       <div class="container">
         <div class="row">
-
-
-
-<div class="input-append input-group input-group-lg" id="search">
-  <input name="proxtext" type="text" class="form-control span7" id="appendedInputButton" placeholder="Search newspaper contents" type="text">
-  <button class="btn btn-default" type="submit">Search</button>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-                  </div>
- </div>
+            <form action="{% url 'chronam_search_pages_results' %}" method="get">
+                <div class="input-append input-group input-group-lg" id="search">
+                <input type="hidden" name="rows" id="rows" alt="rows" value="20" />
+                <input type="hidden" name="searchType" alt="searchType" value="basic" />
+                <input name="proxtext" type="text" class="form-control span7" id="appendedInputButton" placeholder="Search newspaper contents" type="text">
+                <button class="btn btn-default" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
     <div class="container contentMain">{% if crumbs and crumbs|length > 1 %}
       <ul class="breadcrumb">{% for crumb in crumbs %}
