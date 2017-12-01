@@ -41,11 +41,15 @@
 	       class="highlight_words"
 	       data-script_name="{{script_name}}"
 	       data-id="{{object.url}}"
-	       data-words="{{object.words|join:' '}}">
+				 data-words="{{object.words|join:' '}}">
+		<br>
+		{% with object.issue.title as title %}{{title.display_name}}
+		<br>
+		{{object.issue|label}}{% endwith %}
 	</a>
     </li>
     {% endfor %}
-	</ul>
+  </ul>
 	
 	<div class="row">
     <div class="span6">
