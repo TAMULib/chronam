@@ -1,4 +1,5 @@
-{% extends "site_base.html" %} {% load static from staticfiles %} {% load humanize %} {% block content %}
+{% extends "site_base.html" %} {% load static from staticfiles %} {% load custom_filters %} {% load humanize %} {% block content %}
+
 <div class="container">
     <div class="row">
         <div class="span3">
@@ -11,49 +12,25 @@
         <div class="span9 papers">
             <h2>Featured</h2>
             <ul class="featuredImg">
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/>The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/> The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/> The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/>The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/>The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/>The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/>The Battalion
-                    <br/> Date of Issue</li>
-                <li><img src="/media/images/newspaper.png" alt="newspaper" />
-                    <br/>The Battalion
-                    <br/> Date of Issue</li>
+                {% for page in pages %}
+                    <li>
+                        <a href="{{ page.url }}" class="thumbnail" title="{% with page.title as title %}{{title.display_name}} ({{title.place_of_publication}}){% endwith %}">
+                            <img src="{{ page.thumbnail_url }}" width="100" height="136">
+                            {{page.label}}
+                            <br/>{{page.date}}
+                        </a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
     <div class="row">
-        <div class="span3">
-            <h3>Newspaper Stats</h3></div>
+        <div class="span3"></div>
         <div class="span9 stats">
             <ul>
                 <li>
-                    <div class="statBox">8,345</div>
+                    <div class="statBox">{{count}}</div>
                     <div class="statDesc">Total # of Issues</div>
-                </li>
-                <li>
-                    <div class="statBox">&lt;10k</div>
-                    <div class="statDesc">Total # of Visitors</div>
-                </li>
-                <li>
-                    <div class="statBox">3,324</div>
-                    <div class="statDesc">Issues Downloaded</div>
                 </li>
             </ul>
         </div>
