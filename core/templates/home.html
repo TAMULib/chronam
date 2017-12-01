@@ -14,7 +14,7 @@
             <ul class="featuredImg">
                 {% for page in pages %}
                     <li>
-                        <a href="{{ page.url }}" class="thumbnail" title="{% with page.title as title %}{{title.display_name}} ({{title.place_of_publication}}){% endwith %}">
+                        <a href="{{ page.url }}" class="thumbnail" title="{{page.label}}, {{page.date}}">
                             <img src="{{ page.thumbnail_url }}" width="100" height="136">
                             {{page.label}}
                             <br/>{{page.date}}
