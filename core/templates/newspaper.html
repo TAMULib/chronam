@@ -39,8 +39,7 @@
 
 {% block page_nav %} 
 <div id="page_nav">
-{% if title.has_issues %}<a id="page_nav_issues" href="{% url 'chronam_issues' title.lccn %}"><!--Browse Issues--> Gallery View</a> <!--| {% endif %}
-<a id="page_nav_title" href="{% url 'chronam_title' title.lccn %}">About</a> | <a id="page_nav_holdings" href="{% url 'chronam_title_holdings' title.lccn %}">Libraries that Have It</a>  | <a id="page_nav_marc" href="{% url 'chronam_title_marc' title.lccn %}">MARC Record</a>--></div> 
+{% if title.has_issues %}<a id="page_nav_issues" href="{% url 'chronam_issues' title.lccn %}"><!--Browse Issues--> Gallery View</a>{% endif %}></div> 
 {% endblock %}
 
 <div id="std_box"> 
