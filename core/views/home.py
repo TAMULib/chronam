@@ -19,6 +19,7 @@ def home(request, date=None):
     context["date"] = date = today
     context["pages"] = _frontpages(request, date)
     template = get_template("home.html")
+    context["count"] = models.Issue.objects.all().count()
     # note the date is handled on the client side in javascript
     return HttpResponse(content=template.render(context))
 
