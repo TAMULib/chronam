@@ -612,3 +612,13 @@ form {
  .adv-search-link {
      padding: 11px 0px 11px 0px;
  }
+
+ .s-la-widget .input-group-btn:last-child > .btn, .s-la-widget .input-group-btn:last-child > .btn-group {
+    z-index: 2;
+    margin-left: 7px !important;
+}
+
+
+.s-la-widget .input-group-btn .s-la-searchform-button {
+    margin-top: -45px !important;
+}
