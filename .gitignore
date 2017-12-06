@@ -7,5 +7,5 @@ data/ocr
 data/word_coordinates
 .static-media/
 .vagrant/
-cache/
+.cache/
 __MACOSX/
