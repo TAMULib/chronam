@@ -10,43 +10,6 @@
 <div>
     <form action="{% url 'chronam_search_pages_results' %}" method="get" name="fulltext2" id="fulltext2">
         <fieldset>
-            <legend>Limit Search</legend>
-            <div class="row">
-                <!-- state -->
-                <div class="span3"> <label for="id_states">Select States:</label>
-                {{ adv_search_form.state }} </div>
-                <!-- newspaper -->
-                <div class="span3"> <label for="id_lccns">Or Select Newspapers:</label>
-                {{ adv_search_form.lccn }} </div>
-            </div>
-            <div class="row">
-                <!-- page -->
-                <div class="span3">
-                    <label for="id_sequence">Specific page</label>
-                    {{ adv_search_form.sequence }}
-                </div>
-                <div class="span3"
-                    <label for="id_language">Language</label>
-                    {{ adv_search_form.language }}
-                </div>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Select Date Range</legend>
-            <!-- date -->
-            <p class="help-block">Newspaper pages are available for newspapers published between <strong>{{adv_search_form.fulltextStartYear}}-{{adv_search_form.fulltextEndYear}}</strong></p>
-            <div class="row">
-                <div class="span2">
-                    <label for="id_date_from">from</label>
-                    <input id="id_date_from" name="date1" class="span2" type="text" data-date-format="mm/dd/yyyy" data-date="01-01-{{adv_search_form.fulltextStartYear}}" value="01/01/{{adv_search_form.fulltextStartYear}}">
-                </div>
-                <div class="span2">
-                    <label for="id_date_to">to</label>
-                    <input id="id_date_to" name="date2" class="span2" type="text" data-date-format="mm/dd/yyyy" data-date="12-31-{{adv_search_form.fulltextEndYear}}" value="12/31/{{adv_search_form.fulltextEndYear}}">
-                </div>
-            </div>
-        </fieldset>
-        <fieldset>
             <legend>Enter Search</legend>
             <div class="row">
                 <div class="span3">
@@ -61,7 +24,7 @@
                     <label for="id_phrasetext">...with the <strong>phrase</strong>:</label>
                     {{ adv_search_form.phrasetext }}
                 </div>
-            </div>    
+            </div>
             <label for="id_proxtext_adv">...with the words:</label>
             <div class="form-inline">
                 {{ adv_search_form.proxtext }}
@@ -70,6 +33,36 @@
                 <span>words of each other</span>
             </div>
         </fieldset>
+        <fieldset>
+            <legend>Limit Search</legend>
+            <div class="row">
+                <!-- page -->
+                <div class="span3">
+                    <label for="id_sequence">Specific page</label>
+                    {{ adv_search_form.sequence }}
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="row">
+                <div class="span6">
+                    <!-- date -->
+                    <p class="help-block">Newspaper pages are available for newspapers published between <strong>{{adv_search_form.fulltextStartYear}}-{{adv_search_form.fulltextEndYear}}</strong></p>
+                    <div class="row">
+                        <div class="span2">
+                            <label for="id_date_from">from</label>
+                            <input id="id_date_from" name="date1" class="span2" type="text" data-date-format="mm/dd/yyyy" data-date="01-01-{{adv_search_form.fulltextStartYear}}" value="01/01/{{adv_search_form.fulltextStartYear}}">
+                        </div>
+                        <div class="span2">
+                            <label for="id_date_to">to</label>
+                            <input id="id_date_to" name="date2" class="span2" type="text" data-date-format="mm/dd/yyyy" data-date="12-31-{{adv_search_form.fulltextEndYear}}" value="12/31/{{adv_search_form.fulltextEndYear}}">
+                        </div>
+                    </div>
+                    <input type="hidden" name="dateFilterType" value="range" />
+                </div>
+            </div>
+        </fieldset>
+        
         <fieldset>
             <input type="hidden" name="rows" id="rows" value="20" />
             <input type="hidden" name="searchType" value="advanced" />

@@ -124,9 +124,9 @@ urlpatterns += [
         name="chronam_issues_first_pages_page_number"),
 
     # example: /lccn/sn85066387/marc
-    url(r'^lccn/(?P<lccn>\w+)/marc/$', 
-        views.title_marc, 
-        name="chronam_title_marc"),
+    # url(r'^lccn/(?P<lccn>\w+)/marc/$', 
+    #     views.title_marc, 
+    #     name="chronam_title_marc"),
 
     # example: /lccn/sn85066387/feed/
     url(r'^lccn/(?P<lccn>\w+)/feed/$', 
