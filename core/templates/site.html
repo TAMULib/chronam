@@ -31,17 +31,24 @@
     }
 
     ul.newspaper_pages li.span4 {
-	height: 450px;
+	height: auto;
+
     }
+
     @media (min-width: 1200px) {
-	ul.newspaper_pages li.span4 {
-	    height: 575px;
-	}
+        ul.newspaper_pages li.span4 img {
+            height: 575px;
+        }
+    }
+    @media (max-width:1199px) and (min-width: 980px) {
+        ul.newspaper_pages li.span4 img {
+            height: 500px;
+        }
     }
     @media (max-width: 979px) and (min-width: 768px) {
-	ul.newspaper_pages li.span4 {
-	    height: 350px;
-	}
+        ul.newspaper_pages li.span4 img {
+            height: 350px;
+        }
     }
     @media (max-width: 767px) {
 	ul.newspaper_pages li.span4 {
@@ -91,10 +98,10 @@
             </div>
             <div class="nav global-nav visible-phone">
                 <dl class="tabs">
-                    <dd><a href="#">Hours</a></dd>
-                    <dd><a href="#">Libraries</a></dd>
+                    <dd><a href="http://library.tamu.edu/about/hours.html">Hours</a></dd>
+                    <dd><a href="http://library.tamu.edu/about/index.html">Libraries</a></dd>
                     <dd><a href="https://library.tamu.edu/mylibrary/" onclick="location.href='https://library.tamu.edu/mylibrary/'" title="Access the myLibrary online application">myLibrary</a></dd>
-                    <dd><a href="#">Help</a></dd>
+                    <dd><a href="http://askus.library.tamu.edu/">Help</a></dd>
                 </dl>
                 <div class="tabBorder"></div>
                 <div class="lib-link"><a href="http://library.tamu.edu">Texas A&amp;M University <strong>Libraries</strong></a></div>
