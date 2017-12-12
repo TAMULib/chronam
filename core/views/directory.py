@@ -35,7 +35,7 @@ def newspapers(request, state=None, format='html'):
     ethnicity = request.GET.get('ethnicity', None)
 
     if not state and not language and not ethnicity:
-        page_title = 'Texas A&M Digitized Newspapers'
+        page_title = 'All Digitized Newspapers'
     else:
         page_title = 'Results: Digitized Newspapers'
 
