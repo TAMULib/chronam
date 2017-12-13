@@ -33,18 +33,9 @@
                 <span>words of each other</span>
             </div>
         </fieldset>
+        <br/>
         <fieldset>
             <legend>Limit Search</legend>
-            <div class="row">
-                <!-- page -->
-                <div class="span3">
-                    <label for="id_sequence">Specific page</label>
-                    {{ adv_search_form.sequence }}
-                </div>
-            </div>
-        </fieldset>
-        <fieldset>
-             <legend class="sr-only">Time Span Search</legend>
             <div class="row">
                 <div class="span6">
                     <!-- date -->
@@ -65,7 +56,6 @@
         </fieldset>
         
         <fieldset>
-            <legend class="sr-only">Form Control</legend>
             <input type="hidden" name="rows" id="rows" value="20" />
             <input type="hidden" name="searchType" value="advanced" />
             <div class="form-actions">

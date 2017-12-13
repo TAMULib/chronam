@@ -8,9 +8,10 @@
 {{ block.super }}
 <script type="text/javascript">
 jQuery(function($){
-    $("#id_year").change(function(){
-        window.location = '{% url 'chronam_issues' title.lccn %}' + this.value;        
-        });
+    $("#view-year-btn").on('click', function(e){
+        e.preventDefault();
+        window.location = '{% url 'chronam_issues' title.lccn %}' + $("#id_year").find(":selected").text();        
+    });
     $("td.multiple").find("ul").css("display", "none");
     
     $("td.multiple").hover(
@@ -26,11 +27,15 @@ jQuery(function($){
 
 {% block extra_nav %}
 <div id="col2_left"> 
-    <form>
-        <label class="bold" for="year_select">Issues for:</label>&nbsp; {{select_year_form.year}}
+    <form class="form-inline">
+        <label class="bold" for="year_select">Issues for:</label>
+        <div class="input-apend">
+            {{select_year_form.year}}
+            <button id="view-year-btn" class="btn btn-default">View</button>
+        </div>
     </form>
     
-    <p class="rule-top"><a href="{% url 'chronam_issues_first_pages' title.lccn %}">View Gallery</a></p> 
+    <p class="rule-top"><a href="{% url 'chronam_issues_first_pages' title.lccn %}"><strong> View Gallery</strong></a></p> 
     
 </div><!-- end id:col2_left --> 
 {% endblock %}
