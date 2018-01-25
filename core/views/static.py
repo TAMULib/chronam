@@ -45,7 +45,7 @@ def contribute(request):
     page_title = "Contribute"
     crumbs = list(settings.BASE_CRUMBS)
     crumbs.extend([
-        {'label':'contribute',
+        {'label':'Contribute',
          'href': urlresolvers.reverse('chronam_contribute'),
          'active': True},
     ])
