@@ -6,10 +6,10 @@ from django.template import RequestContext
 
 @cache_page(settings.DEFAULT_TTL_SECONDS)
 def about(request):
-    page_title = "About Chronicling America"
+    page_title = "About Texas A&M University Newspaper Collection"
     crumbs = list(settings.BASE_CRUMBS)
     crumbs.extend([
-        {'label':'About',
+        {'label':'About Texas A&M University Newspaper Collection',
          'href': urlresolvers.reverse('chronam_about'),
          'active': True},
     ])
