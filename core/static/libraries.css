@@ -68,6 +68,12 @@ table.month td.multiple {
     color: #ededed;
 }
 
+a {
+    color: #2200CC;
+    text-decoration: none;
+}
+
+
 body {
     min-height: 1225px;
 }
@@ -309,6 +315,12 @@ body {
 	
 	
 }
+
+.navbar-inverse .brand, .navbar-inverse .nav>li>a {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+
 
 
 .global-nav.tabs dd>a {
