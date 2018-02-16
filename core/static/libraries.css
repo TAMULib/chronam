@@ -52,6 +52,8 @@ table.month td.multiple {
    margin: 0 0 0 0px !important; /*negating the bottom margin in bootstrap for this case*/ 
 }
 
+.adv-search-link{margin-top:10px;}
+
 .navbar {
     margin-bottom: 0px;
 }
