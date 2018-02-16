@@ -78,7 +78,14 @@ a {
     color: #2b5d7d;
     text-decoration: none;
 }
+.site a{
+color: #ffffff;
+    text-decoration: none;
+}
 
+.site a:hover{
+	color:#ffc222;
+}
 
 body {
     min-height: 1225px;
