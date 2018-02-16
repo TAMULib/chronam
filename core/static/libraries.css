@@ -48,6 +48,10 @@ table.month td.multiple {
 /* width: 75%; */
 }
 
+.searchBox form{
+   margin: 0 0 0 0px !important; /*negating the bottom margin in bootstrap for this case*/ 
+}
+
 .navbar {
     margin-bottom: 0px;
 }
