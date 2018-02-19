@@ -201,9 +201,6 @@ text-align: center;
     background: url('//library.tamu.edu/assets/images/tam.png') no-repeat;
 }
 
-.name-lib-link a {
-    color: #fff;
-}
 
 .navbar-inverse.brand,
 .navbar-inverse.nav > li > a {
@@ -659,4 +656,9 @@ dd {
 .container {
     width: 1170px;
 }}
+
+
+.name-lib-link a:hover {
+    color: #fff;
+}
 
