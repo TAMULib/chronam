@@ -59,12 +59,6 @@
                         {{ place.county }}, 
                         {% endifnotequal %}
                         {{ place.state }}
-                        <br />View more titles from this: 
-                        <a href="{% url 'chronam_city' place.state|pack_url place.county|pack_url place.city|pack_url %}">City</a>
-                        {% ifnotequal place.county None %}
-                        <a href="{% url 'chronam_county' place.state|pack_url place.county|pack_url %}">County</a>,
-                        {% endifnotequal %}
-                        <a href="{% url 'chronam_state' place.state|pack_url %}">State</a>
                     </li>
                     {% endfor %}
                 </ul>
