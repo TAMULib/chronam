@@ -507,6 +507,12 @@ dl {
 }
 
 
+#results label{
+display: inline-block;
+}
+
+
+
 
 .input-group-addon, .input-group-btn, .input-group .form-control {
     display: table-cell;
