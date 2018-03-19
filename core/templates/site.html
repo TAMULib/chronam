@@ -214,5 +214,33 @@
     $(initPage);
 })(jQuery)
     </script>
+
+<script src="{% static 'js/jquery.ba-bbq.min.js' %}"></script>
+	
+<script type="text/javascript">
+
+jQuery(function($){
+    $.ajaxSettings.traditional = true;
+    $("#sort_select option[value='{{sort}}']").attr("selected", true);
+    $("#rpp_select option[value='{{rows}}']").attr("selected", true);
+
+	
+    $("#rpp_select").change(function(){
+        window.location=$.param.querystring(location.href, {'rows': this.value});
+    });
+	
+    $("#sort_select").change(function(){
+        window.location=$.param.querystring(location.href, {'sort': this.value});
+    });
+	
+    $("#check_front").change(function(){
+        var checked = $("#check_front").attr("checked") ? 1 : '';
+        window.location=$.param.querystring(location.href, {'sequence': checked});
+    });
+	
+
+});
+</script>	
+	
   </body>
 </html>

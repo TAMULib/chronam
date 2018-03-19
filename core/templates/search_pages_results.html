@@ -29,6 +29,21 @@
 	  <li><a {% if page.has_next %}{% else %}class="disabled"{% endif %} href="{{ next_url }}" class="next">next</a></li>
 	</ul>
       </div>
+        <form id="results">
+            <p>
+            <label class="norm" for="sort_select">Sort by:</label> 
+            <select class="sel" name="sort_select" id="sort_select">
+                <option value="relevance">Relevance</option>
+                <option value="title">Title</option>
+                <option value="date">Date</option>
+            </select> &nbsp;  &nbsp; 
+            <label class="norm" for="rpp_select">Results per page:</label> 
+            <select class="sel" name="rpp_select" id="rpp_select">
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            </p>
+        </form>	  	  
     </div>
 
   </div>  
