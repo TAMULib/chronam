@@ -361,7 +361,7 @@ dl {
 @media only screen and (min-width: 43.913em) {
     .global-nav .tabs dd>a {
         padding: 15px 20px;
-        border-right: 1px solid #6a0000;
+  /*      border-right: 1px solid #6a0000; */
     }
 
 

@@ -99,7 +99,7 @@
             <div class="row">
               <div class="span6  pull-left hidden-phone lib-link"><a href="http://library.tamu.edu">Texas A&amp;M University Libraries</a></div>
                  <div class="span6 pull-right">
-                    <div class="global-tabs  hidden-phone">
+                    <div class="global-tabs hidden-phone">
                         <dl class="tabs">
                             <dd><a href="http://askus.library.tamu.edu/">Help</a></dd>
                         </dl>
@@ -161,6 +161,7 @@
       </div>
     </div>
 
+{% if page_title != 'Advanced Search' %}	
     <div class="searchBox">
         <div class="container">
             <div class="row">
@@ -180,13 +181,14 @@
                         </form>
 						
                         <div class="span2 offset1 adv-search-link">
-                                <a href="{% url 'chronam_search_advanced' %}">Advanced Search</a>
-                            </div>
+							<a href="{% url 'chronam_search_advanced' %}">Advanced Search</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+{% endif %}
 
     <div class="container contentMain">{% if crumbs and crumbs|length > 1 %}
       <ul class="breadcrumb">{% for crumb in crumbs %}
