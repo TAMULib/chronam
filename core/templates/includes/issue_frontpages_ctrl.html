@@ -4,33 +4,43 @@
     <span class="nav"><a href="{% url 'chronam_issues' issue.title.lccn %}" class="ar-back">Back to Browse All Available Issues</a> 
 | Show all front pages</span>
 {% if paginator.num_pages > 1 %}
-    <span class="pagination">
+    <span class="pagination pagination-small">
 |
-        {% if page.has_previous %}
-        <a href="{% url 'chronam_issues_first_pages_page_number' title.lccn page.previous_page_number %}" class="prev">
-            <img src="{% static 'images/pag_prev_on.gif' %}" alt="prev" width="13" height="13" />
-        </a>
+<ul style="margin-bottom: -9px;">
+	  <li>
+
+	    {% if page.has_previous %}
+			<a href="{% url 'chronam_issues_first_pages_page_number' title.lccn page.previous_page_number %}" class="prev">prev</a>
+		{% else %}
+			<a class="disabled" class="prev">prev</a>
         {% endif %}
-        {% for page_number in page_range_short %}
-          {% if not forloop.first %}|{% endif %}
-      {% ifequal page_number "..." %}
-      ...
-      {% else %}
 
-        {% ifequal page_number page.number %}
-        <span class="off">{{page_number}}</span>
-        {% else %}
-        <a href="{% url 'chronam_issues_first_pages_page_number' title.lccn page_number %}">{{page_number}}</a>
-        {% endifequal %}
+		</li>
+	
+	  {% for page_number in page_range_short %}
 
-      {% endifequal %}
+	  {% ifequal page_number "..." %}
+	  <li><span>...</span></li>
+	  {% else %}
 
-        {% endfor %}
+	  {% ifequal page_number page.number %}
+	  <li class="disabled"><span>{{page_number}}</span></li>
+	  {% else %}
+	  <li><a href="{% url 'chronam_issues_first_pages_page_number' title.lccn page_number %}">{{page_number}}</a></li>
+	  {% endifequal %}
 
-        {% if page.has_next %}
-        <a href="{% url 'chronam_issues_first_pages_page_number' title.lccn page.next_page_number %}" class="next">
-        <img src="{% static 'images/pag_next_on.gif' %}" alt="next" width="13" height="13" /></a>
-        {% endif %}
+	  {% endifequal %}
+	  {% endfor %}
+	  
+		<li>
+	    {% if page.has_next %}
+			<a href="{% url 'chronam_issues_first_pages_page_number' title.lccn page.next_page_number %}" class="next">next</a>
+		{% else %}
+			<a class="disabled" class="next">next</a>
+        {% endif %}		
+		</li>
+		
+	</ul>
     </span>
     <form action="" method="GET" class="jumptopage" name="page_number_form">
         <label for="jumptopage">Jump to page:</label> <input class="std" type="text" id="jumptopage" name="page" value="" size="5" />
