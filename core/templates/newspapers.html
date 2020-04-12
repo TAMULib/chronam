@@ -34,7 +34,7 @@
         </tr>
         </thead>
         <tbody>
-	<!-- {% for state, titles in newspapers_by_state %} -->     
+  
         {% for title in titles %}
             {% with title.lccn as lccn %}
             <tr>
@@ -48,7 +48,7 @@
             </tr>
             {% endwith %}
         {% endfor %}
-	<!-- {% endfor %}   -->      
+   
         </tbody>
     </table>
 </div><!-- end class:search_results_body -->
